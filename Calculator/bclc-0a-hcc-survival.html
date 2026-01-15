@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title
+    data-en="Prediction Model for the Overall Survival of Patients with BCLC stage 0/A Hepatocellular Carcinoma and Clinically Significant Portal Hypertension"
+    data-zh="针对BCLC 0/A期肝细胞癌合并临床显著门静脉高压症患者总生存期的预测模型">
+    Prediction Model for the Overall Survival of Patients with BCLC stage 0/A Hepatocellular Carcinoma and Clinically
+    Significant Portal Hypertension</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-content">
+        <div class="header-text">
+          <h1
+            data-en="Prediction Model for the Overall Survival of Patients with BCLC stage 0/A Hepatocellular Carcinoma and Clinically Significant Portal Hypertension"
+            data-zh="针对BCLC 0/A期肝细胞癌合并临床显著门静脉高压症患者总生存期的预测模型">Prediction Model for the Overall Survival of Patients with BCLC stage
+            0/A Hepatocellular Carcinoma and Clinically Significant Portal Hypertension</h1>
+          <p data-en="Estimate the survival benefit of patients with BCLC stage 0/A hepatocellular carcinoma and clinically significant portal hypertension following radical hepatectomy"
+            data-zh="评估BCLC 0/A期肝细胞癌伴临床显著门静脉高压症患者接受根治性肝切除术后的生存获益">Estimate the survival benefit of patients with BCLC stage 0/A
+            hepatocellular carcinoma and clinically significant portal hypertension following radical hepatectomy</p>
+        </div>
+        <div class="hospital-logo">
+          <img src="tongji.png" alt="Hospital Logo" />
+        </div>
+        </div>
+      <div class="navigation-controls">
+        <a href="index.html" class="home-btn" data-en="← Back to Home" data-zh="← 返回主页">← Back to Home</a>
+        <div class="language-switch">
+          <button class="lang-btn" onclick="switchLanguage('zh')">中文</button>
+          <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="form-section">
+        <h2 data-en="Prediction Model Parameters" data-zh="预测模型参数">Prediction Model Parameters</h2>
+        <p class="instruction" data-en="Please fill in all the fields and click the submit button"
+          data-zh="请填写所有字段并点击计算按钮">Please fill in all the fields and click the submit button</p>
+
+        <form id="calculatorForm">
+          <div class="form-group">
+            <label data-en="1) Child-Pugh class" data-zh="1) Child-Pugh分级">1) Child-Pugh class</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="childPugh" value="A" required>
+                <span data-en="A" data-zh="A级">A</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="childPugh" value="B">
+                <span data-en="B" data-zh="B级">B</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-en="2) Preoperative AFP level" data-zh="2) 术前AFP水平">2) Preoperative AFP level</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="afpLevel" value="low" required>
+                <span data-en="< 400 ng/mL" data-zh="< 400 ng/mL">
+                  < 400 ng/mL</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="afpLevel" value="high">
+                <span data-en="≥ 400 ng/mL" data-zh="≥ 400 ng/mL">≥ 400 ng/mL</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-en="3) Tumor number" data-zh="3) 肿瘤数量">3) Tumor number</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="tumorSize" value="small" required>
+                <span data-en="Solitary" data-zh="单发">Solitary</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tumorSize" value="large">
+                <span data-en="Multiple" data-zh="多发">Multiple</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-en="4) Gender" data-zh="4) 性别">4) Gender</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="gender" value="female" required>
+                <span data-en="Female" data-zh="女性">Female</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="gender" value="male">
+                <span data-en="Male" data-zh="男性">Male</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-en="5) Microvascular invasion" data-zh="5) 微血管侵犯">5) Microvascular invasion</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="microvascularInvasion" value="no" required>
+                <span data-en="No" data-zh="否">No</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="microvascularInvasion" value="yes">
+                <span data-en="Yes" data-zh="是">Yes</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-en="6) Synchronous splenectomy" data-zh="6) 同期脾切除术">6) Synchronous splenectomy</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="synchronousSplenectomy" value="yes" required>
+                <span data-en="Yes" data-zh="是">Yes</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="synchronousSplenectomy" value="no">
+                <span data-en="No" data-zh="否">No</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="calculate-btn" data-en="Calculate Prediction Results" data-zh="计算预测结果">Calculate
+            Prediction Results</button>
+        </form>
+      </div>
+
+      <div class="results-section">
+        <h2 data-en="Prediction Results" data-zh="预测结果">Prediction Results</h2>
+        <div id="results" class="hidden">
+          <div class="result-item">
+            <h3 data-en="Risk Assessment" data-zh="风险评估">Risk Assessment</h3>
+            <div class="result-value risk-score">
+              <span data-en="Risk Score: " data-zh="风险指数: ">Risk Score: </span>
+              <span id="riskScore">--</span>
+            </div>
+            <div class="risk-level">
+              <span data-en="Risk Level: " data-zh="风险等级: ">Risk Level: </span>
+              <strong id="riskLevel" class="risk-badge">--</strong>
+            </div>
+          </div>
+
+          <div class="result-item">
+            <h3 data-en="Expected Survival Time" data-zh="预期生存时间">Expected Survival Time</h3>
+            <div class="result-value survival-time">
+              <span id="expectedSurvival">--</span> <span class="result-unit" data-en="months"
+                data-zh="个月">months</span>
+            </div>
+          </div>
+
+          <div class="result-item">
+            <h3 data-en="Survival Probability" data-zh="生存概率">Survival Probability</h3>
+            <div class="survival-rates">
+              <div class="survival-rate-item">
+                <span data-en="3-year survival: " data-zh="3年生存率: ">3-year survival: </span><strong
+                  id="survival3Year">--%</strong>
+              </div>
+              <div class="survival-rate-item">
+                <span data-en="5-year survival: " data-zh="5年生存率: ">5-year survival: </span><strong
+                  id="survival5Year">--%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="noResults" class="no-results">
+          <p data-en="Please fill out all parameters and click the calculate button to view prediction results"
+            data-zh="请填写所有参数后点击计算按钮查看预测结果">Please fill out all parameters and click the calculate button to view
+            prediction results</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <h3 data-en="Important Notice" data-zh="重要提示">Important Notice</h3>
+      <p data-en="This predictive model was developed and validated using data from patients with BCLC stage 0/A hepatocellular carcinoma and clinically significant portal hypertension. It is intended only to estimate overall survival after curative hepatectomy. The predicted value may differ from actual survival and must not be used as the sole basis for clinical decisions. Treatment plans should be carefully formulated by the treating clinician, integrating the patient's specific condition, preferences, and multidisciplinary assessment. This calculator is provided solely for academic reference, does not constitute medical advice, and carries no legal liability for its predictions."
+        data-zh="本预测模型基于 BCLC 0/A 期肝细胞癌合并有临床意义的门静脉高压症患者数据构建与验证，旨在为根治性肝切除术后总生存期提供估算参考。预测结果可能与实际生存情况存在偏差，不应作为临床决策的唯一依据。具体诊疗方案须由临床医生结合患者实际病情、意愿及多学科评估后谨慎制定。本计算器仅提供学术参考，不构成医疗建议，相关预测结果不承担任何法律责任。">
+        This
+        predictive model was developed and validated using data from patients with BCLC stage 0/A hepatocellular carcinoma and
+        clinically
+        significant portal hypertension. It is intended only to estimate overall survival after curative hepatectomy.
+        The predicted value may differ from actual survival and must not be used as the sole basis for clinical decisions.
+        Treatment plans should be carefully formulated by the treating clinician, integrating the patient's specific
+        condition,
+        preferences, and multidisciplinary assessment. This calculator is provided solely for academic reference, does not
+        constitute medical advice, and carries no legal liability for its predictions.
+      </p>
+    </div>
+
+    <div class="footer">
+      <p data-en="© 2025 Overall Survival Prediction Model for BCLC 0/A HCC with Portal Hypertension | For Academic Research Use Only"
+        data-zh="© 2025 BCLC 0/A期肝细胞癌合并门静脉高压症总生存期预测模型 | 仅供学术研究使用">© 2025 Overall Survival Prediction Model for BCLC 0/A HCC
+        with Portal Hypertension |
+        For Academic Research Use Only</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
