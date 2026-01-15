@@ -147,19 +147,19 @@ function calculateSurvivalProbability(lp, years) {
 
 // 计算风险分级
 function calculateRiskLevel(riskScore) {
-  if (riskScore >= -0.641 && riskScore < 1.478) {
+  if (riskScore >= -0.641 && riskScore <= 1.478) {
     return {
       level: 'low-risk',
       labelEn: 'Low Risk',
       labelZh: '低风险'
     };
-  } else if (riskScore >= 1.478 && riskScore < 1.740) {
+  } else if (riskScore > 1.478 && riskScore <= 1.740) {
     return {
       level: 'intermediate-risk',
       labelEn: 'Intermediate Risk',
       labelZh: '中风险'
     };
-  } else if (riskScore >= 1.740 && riskScore <= 3.665) {
+  } else if (riskScore > 1.740 && riskScore <= 3.665) {
     return {
       level: 'high-risk',
       labelEn: 'High Risk',
