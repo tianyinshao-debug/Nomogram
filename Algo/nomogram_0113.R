@@ -35,7 +35,6 @@ data$Hospital<-as.factor(data$Hospital)
 train_data <- read_excel("C:/data/train_data.xlsx")
 test_data <- read_excel("C:/data/test_data.xlsx")
 
-
 #####列线图
 library(pec)
 library(rms)
