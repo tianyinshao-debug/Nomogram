@@ -31,13 +31,9 @@ data <- read_excel("~/Desktop/科研/列线图/514.xlsx")
 #把分类型变量转化成因子型
 data$Hospital<-as.factor(data$Hospital)
 
-###划分训练、测试集
-# 设置随机种子以保证可重复性
-set.seed(123)
-# 按7:3划分训练集和测试集
-train_index <- createDataPartition(data$Hospital, p = 0.7, list = FALSE)
-train_data <- data[train_index, ]
-test_data <- data[-train_index, ]
+# 从固定路径读取训练集和验证集
+train_data <- read_excel("C:/data/train_data.xlsx")
+test_data <- read_excel("C:/data/test_data.xlsx")
 
 
 #####列线图
