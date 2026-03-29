@@ -4,7 +4,7 @@ const linearPredictorCoefficients = {
   childPugh: { A: 0, B: 0.891 },
   afpLevel: { low: 0, high: 0.603 },
   tumorSize: { small: 0, large: 0.681 },
-  gender: { female: 0, male: 0.625 },
+  sex: { female: 0, male: 0.625 },
   microvascularInvasion: { no: 0, yes: 0.865 }
 };
 
@@ -221,7 +221,7 @@ function validateForm(formData) {
     'childPugh',
     'afpLevel',
     'tumorSize',
-    'gender',
+    'sex',
     'microvascularInvasion'
   ];
 
